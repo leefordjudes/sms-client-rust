@@ -85,7 +85,6 @@ impl Client {
 #[cfg(test)]
 mod tests {
     use super::*;
-	use std::collections::HashMap;
 
     #[tokio::test]
     async fn test_send_otp() -> Result<()> {
@@ -93,7 +92,7 @@ mod tests {
         Client::initialize_from_env();
         let client = Client::global();
         let data = r#"{
-            "mobile": "8610993906",
+            "mobile": "9500288967",
             "otp": 123456
         }"#;
         let input_data = serde_json::from_str(&data).unwrap();

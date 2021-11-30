@@ -1,5 +1,3 @@
-use std::collections::HashMap;
-
 use serde::{Deserialize, Serialize};
 
 use crate::{Client, Result, Error, ErrorKind, MobileNumber};
@@ -19,12 +17,6 @@ pub struct SmsData {
     pub authkey: String,
     pub extra_param: String,
 }
-
-#[derive(Debug, Serialize, Deserialize)]
-pub struct TemplateData {
-    pub template_data: HashMap<String, String>
-}
-
 
 pub struct Handler<'client> {
     client: &'client Client,
