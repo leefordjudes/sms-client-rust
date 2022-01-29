@@ -3,8 +3,8 @@ use reqwest::Url;
 use serde::Serialize;
 
 mod api;
-mod mobile_no;
-use mobile_no::*;
+mod types;
+use types::*;
 mod error;
 use error::{Context, Error, ErrorKind, Result};
 

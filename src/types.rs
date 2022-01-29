@@ -20,7 +20,7 @@ impl FromStr for MobileNumber {
             .is_match(s)
             .then(|| s)
             .ok_or(Error::new("Invalid mobile number", ErrorKind::InvalidData))?;
-        let mobile_no = MobileNumber(val.to_lowercase());
+        let mobile_no = MobileNumber(format!("+91{}",val.to_lowercase()));
         Ok(mobile_no)
     }
 }
